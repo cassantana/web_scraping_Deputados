@@ -1,6 +1,8 @@
 ##########################################################################################################################
 Acessando o site dados abertos, realizando o web scraping e salvando todos os dados em um arquivo csv
 ##########################################################################################################################
+Exercício do curso "Introdução à Programação: Python para jornalistas" do Knight Center. 
+##########################################################################################################################
 
 import requests 
 import csv
