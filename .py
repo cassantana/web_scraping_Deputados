@@ -1,8 +1,4 @@
-##########################################################################################################################
-Acessando o site dados abertos, realizando o web scraping e salvando todos os dados em um arquivo csv
-##########################################################################################################################
-Exercício do curso "Introdução à Programação: Python para jornalistas" do Knight Center. 
-##########################################################################################################################
+
 
 import requests 
 import csv
@@ -14,8 +10,8 @@ arquivo_deputados = csv.writer(arquivo, lineterminator = "\n")
 arquivo_deputados.writerow(["uri", "nomeCivil", "nomeEleitoral", "siglaPartido", "siglaUf", "telefone", "email", "sexo", "dataNascimento"])
 
 
-for pagina in [1,2,3,4,5,6]:##como a página dos dados abertos tem seis páginas, foi feito um for para percorrê-las uma a uma
-    parametros = {'formato': 'json', 'itens': 100, 'pagina': pagina} ##itens se refere ao número de deputados por página
+for pagina in [1,2,3,4,5,6]:
+    parametros = {'formato': 'json', 'itens': 100, 'pagina': pagina} 
     resposta = requests.get(url, parametros) 
     for deputado in resposta.json()['dados']:
         deputados_uri = deputado['uri'] 
